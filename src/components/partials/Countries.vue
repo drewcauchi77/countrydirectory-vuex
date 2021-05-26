@@ -6,12 +6,12 @@
             <th>Domain</th>
             <th>Calling Code</th>
         </tr>
-        <tr v-for="country in allCountries" :key="country.alpha2Code">
+        <tr v-for="country in allCountries" :key="country.alpha3Code">
             <td class="country-flag">
                 <img :src="country.flag" :alt="country.name">
             </td>
             <td class="country-name">
-                <a href="#">{{ country.name }} ({{ country.alpha2Code }}/{{ country.alpha3Code }})</a>
+                <router-link :to="'/countries/' + country.alpha3Code.toLowerCase()">{{ country.name }} ({{ country.alpha2Code }}/{{ country.alpha3Code }})</router-link>
             </td>
             <td class="country-domain">
                 <div v-for="domain in country.topLevelDomain" :key="domain">
