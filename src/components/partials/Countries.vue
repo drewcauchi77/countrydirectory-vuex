@@ -6,7 +6,7 @@
             <th>Domain</th>
             <th>Calling Code</th>
         </tr>
-        <tr v-for="country in allCountries" :key="country.alpha3Code">
+        <tr v-for="(country, index) in allCountries" :key="index">
             <td class="country-flag">
                 <img :src="country.flag" :alt="country.name">
             </td>
