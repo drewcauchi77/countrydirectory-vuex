@@ -26,6 +26,17 @@ const actions = {
         }catch(error){
             console.log(error)
         }
+    },
+    async filterCountriesByRegion({ commit, dispatch }, e) {
+        const region = e.target.options[e.target.options.selectedIndex].innerText
+
+        if(region !== 'All'){
+            const response = await axios.get(`https://restcountries.eu/rest/v2/region/${region}`)
+            
+            commit('setCountries', response.data)
+        }else{
+            dispatch('fetchCountries')
+        }
     }
 }
 

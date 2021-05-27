@@ -40,5 +40,6 @@ export default {
         font-family: 'Dosis', sans-serif;
         width: 250px;
         height: 30px;
+        box-sizing: border-box;
     }
 </style>
