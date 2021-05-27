@@ -1,5 +1,6 @@
 <template>
     <div>
+        <label for="search"><strong>Search:</strong></label>
         <input v-model="search" 
             name="search" 
             type="text" 
@@ -28,3 +29,16 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    label{
+        font-family: 'Dosis', sans-serif;
+    }
+    input{
+        display: inline-block;
+        margin-left: 10px;
+        font-family: 'Dosis', sans-serif;
+        width: 250px;
+        height: 30px;
+    }
+</style>
